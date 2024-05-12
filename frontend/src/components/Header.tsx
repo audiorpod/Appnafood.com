@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import MobileNav from "./MobileNav";
 
 const Header = () => {
   return(
@@ -6,8 +7,11 @@ const Header = () => {
         <div className="container mx-auto flex justify-between items-centre">
             <Link to='/'  // where this link gose to 
             className="text-3xl font tracking-tight text-orange-500">
-                AppnaFood.Zon
+                AppnaFood.Zone
             </Link>
+            <div className="md.hidden">     
+              <MobileNav/>
+            </div>
         </div>   
     </div>
   )
