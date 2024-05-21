@@ -1,4 +1,4 @@
-import { CircleUserIcon, Menu } from "lucide-react";
+import {  CircleUserRound, Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetDescription, SheetTitle, SheetTrigger } from "./ui/sheet";
 import { Separator } from "@radix-ui/react-separator";
 import { Button } from "./ui/button";
@@ -15,9 +15,11 @@ const MobileNav = () => {
         <SheetContent className="space-y-3">
             <SheetTitle>
                 {isAuthenticated ? (<span className="flex item-centre font-bold gap-2">
-                    <CircleUserIcon className="text-orange-500" />
+                    <CircleUserRound className="text-orange-500" />
                     { user?.email}
-                </span> ): (   <span> Welcome to AppnaFood.Zone</span> )}
+                </span> ) : (  
+                     <span> Welcome to AppnaFood.Zone</span>
+                      )}
              
             </SheetTitle>
             <SheetDescription className="flex flex-col gap-4">
