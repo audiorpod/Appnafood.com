@@ -2,7 +2,7 @@ import express, { Request, Response } from "express";
 import cors from "cors";
 import "dotenv/config";
 import mongoose from "mongoose";
-import MyUserRoute from "./routes/MyUserRoute";
+import myUserRoute from "./routes/MyUserRoute";
 //import MyUserRoute from "./routes/MyUserRoute";
 
 mongoose
@@ -15,7 +15,7 @@ app.use(cors());
 
 
 // /api/my/user
-app.use("/api/my/user",  MyUserRoute);
+app.use("/api/my/user",  myUserRoute);
 
 app.listen(8000, () =>{
     console.log("server started on localhost:8000");

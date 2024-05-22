@@ -1,5 +1,6 @@
 import express from "express";
 import MyUserController from "../controllers/MyUserController";
+import { jwtCheck } from "../middleware/auth";
 
 
 const  router = express.Router();
@@ -7,6 +8,6 @@ const  router = express.Router();
 
 // /api/my/user  -> handel business logic 
 
-router.post("/", MyUserController.createCurrentUser);
+router.post("/",jwtCheck, MyUserController.createCurrentUser);
 
 export default router;
