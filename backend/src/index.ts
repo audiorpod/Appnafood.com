@@ -14,6 +14,9 @@ app.use(express.json());
 app.use(cors());
 
 
+app.get("/health", async( req: Request, res: Response )=> {
+
+})
 // /api/my/user
 app.use("/api/my/user",  myUserRoute);
 
